@@ -37,10 +37,12 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-gem 'authlogic'
-
 group :test do
     gem 'cucumber-rails'
     gem 'capybara'
     gem 'database_cleaner'
 end
+
+gem 'devise'
+
+gem 'geocoder'
