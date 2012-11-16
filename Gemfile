@@ -46,3 +46,6 @@ end
 gem 'devise'
 
 gem 'geocoder'
+
+gem 'rmagick'
+gem 'carrierwave'

@@ -1,5 +1,6 @@
 Playgrounds::Application.routes.draw do
-  root :to => 'playground#index'
+  resources :playgrounds
+  root :to => 'playgrounds#index'
   
   devise_for :users
 

@@ -1,0 +1,8 @@
+<h1>All Playgrounds</h1>
+
+<ul>
+<% @playgrounds.each do |pg| %>
+    <li><%= link_to pg.name, playground_path(pg) %> in <%= pg.suburb%>, <%= pg.state%>, <%= pg.country%></li>
+<% end %>
+    <li><%= link_to 'Submit a new playground', new_playground_path %>
+</ul>
