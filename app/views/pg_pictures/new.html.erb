@@ -1,0 +1,9 @@
+<h2>Add a new picture to <%= @playground.name %></h2>
+<%= form_for [@playground, @pg_picture] do |f| %>
+    <%= f.label :image%>
+    <%= f.file_field :image %><br />
+    
+    <%= f.submit %>
+<% end %>
+
+<%= link_to "Return to All Playgrounds", playgrounds_path%>

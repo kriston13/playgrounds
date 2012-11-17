@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  playgrounds_id: 1
+  image: MyString
+
+two:
+  playgrounds_id: 1
+  image: MyString

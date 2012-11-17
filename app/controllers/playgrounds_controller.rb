@@ -17,6 +17,7 @@ class PlaygroundsController < ApplicationController
   
   def show
     @playground = Playground.find(params[:id])
+    @pg_pix = @playground.pg_pictures.all
   end
   
 end

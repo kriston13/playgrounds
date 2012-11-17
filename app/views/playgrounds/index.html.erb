@@ -2,7 +2,7 @@
 
 <ul>
 <% @playgrounds.each do |pg| %>
-    <li><%= link_to pg.name, playground_path(pg) %> in <%= pg.suburb%>, <%= pg.state%>, <%= pg.country%></li>
+    <li><%= link_to pg.name, playground_path(pg.id) %> in <%= pg.suburb%>, <%= pg.state%>, <%= pg.country%></li>
 <% end %>
     <li><%= link_to 'Submit a new playground', new_playground_path %>
 </ul>

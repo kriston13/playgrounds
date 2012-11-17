@@ -49,3 +49,4 @@ gem 'geocoder'
 
 gem 'rmagick'
 gem 'carrierwave'
+gem 'exifr'

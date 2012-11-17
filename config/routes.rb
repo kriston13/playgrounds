@@ -1,5 +1,9 @@
 Playgrounds::Application.routes.draw do
-  resources :playgrounds
+  resources :playgrounds do
+    resources :pg_pictures
+  end
+
+
   root :to => 'playgrounds#index'
   
   devise_for :users
