@@ -3,6 +3,18 @@
 <ul>
 <% @playgrounds.each do |pg| %>
     <li><%= link_to pg.name, playground_path(pg.id) %> in <%= pg.suburb%>, <%= pg.state%>, <%= pg.country%></li>
+    <% if pg.address %>
+        <ul>
+        <% closeby = pg.nearbys(1) %>
+        <% if closeby.size > 0 %>
+            <% for spot in closeby %>
+                <li><%= link_to spot.name, spot %></li>
+            <% end %>
+        <% else %>
+            <li>There are no nearby playgrounds</li>
+        <% end %>
+        </ul>
+    <% end %>
 <% end %>
     <li><%= link_to 'Submit a new playground', new_playground_path %>
 </ul>

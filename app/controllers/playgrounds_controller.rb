@@ -20,4 +20,7 @@ class PlaygroundsController < ApplicationController
     @pg_pix = @playground.pg_pictures.all
   end
   
+
+  protected
+
 end

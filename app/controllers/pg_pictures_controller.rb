@@ -7,9 +7,22 @@ class PgPicturesController < ApplicationController
   
   def create
     @pg_picture = @playground.pg_pictures.new(params[:pg_picture])
-    @pg_picture.save
-    flash[:notice] = "Picture has been created"
-    redirect_to @playground
+    
+
+    
+    if @pg_picture.save
+      
+      flash[:notice] = "Picture was uploaded"
+      logger.debug "XXX checking if #{@playground.name} has an address"
+      if(not @playground.address)
+        logger.debug "XXX about to set the address"
+        @playground.set_playground_location(@pg_picture.latitude, @pg_picture.longitude, @pg_picture.place)
+      end
+      redirect_to @playground
+    else
+      flash[:notice] = "Picture was not successfully uploaded"
+      redirect_to @playground
+    end
   end
   
   def destroy
@@ -23,5 +36,7 @@ class PgPicturesController < ApplicationController
     def find_playground
       @playground = Playground.find(params[:playground_id])
     end
+  
+
   
 end

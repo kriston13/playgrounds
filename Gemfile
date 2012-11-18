@@ -49,4 +49,6 @@ gem 'geocoder'
 
 gem 'rmagick'
 gem 'carrierwave'
-gem 'exifr'
+#gem 'exifr'
+
+gem 'mini_exiftool_vendored'
