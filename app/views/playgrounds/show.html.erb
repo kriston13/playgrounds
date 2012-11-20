@@ -5,7 +5,8 @@
 
 <p>Located in: <%= @playground.suburb %>, <%= @playground.state %>, <%= @playground.country %><br />
 Address by geocode: <%= @playground.address %><br />
-Geocode location: (<%=@playground.latitude%>, <%=@playground.longitude%>)
+Geocode location: (<%=@playground.latitude%>, <%=@playground.longitude%>)<br />
+<%= link_to "Change this playground's details", edit_playground_path(@playground) %>
 </p>
 
 </div>
@@ -21,6 +22,7 @@ Geocode location: (<%=@playground.latitude%>, <%=@playground.longitude%>)
                 Address: <%= pix.place %>
                 Latitude - Longitude: <%= pix.latitude %> - <%= pix.longitude %><br />
             <% end %>
+
             <%= button_to "Delete this picture", playground_pg_picture_path(@playground, pix), :method => "delete", :data => {:confirm => "Are you sure you want to delete this picture?"} %>
         </p>
     <% end %>

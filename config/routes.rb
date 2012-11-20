@@ -1,4 +1,6 @@
 Playgrounds::Application.routes.draw do
+  resources :equipment
+
   resources :playgrounds do
     resources :pg_pictures
   end

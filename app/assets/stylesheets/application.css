@@ -38,4 +38,6 @@ h1 {
 	position:absolute;
 	top:0px;
 	right:0px;
+	border: 1px dotted black;
+	padding: 5px;
 }

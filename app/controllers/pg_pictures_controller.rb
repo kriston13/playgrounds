@@ -14,7 +14,7 @@ class PgPicturesController < ApplicationController
       
       flash[:notice] = "Picture was uploaded"
       logger.debug "XXX checking if #{@playground.name} has an address"
-      if(not @playground.address)
+      if(not @playground.address.length > 0)
         logger.debug "XXX about to set the address"
         @playground.set_playground_location(@pg_picture.latitude, @pg_picture.longitude, @pg_picture.place)
       end

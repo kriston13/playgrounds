@@ -9,6 +9,9 @@
 <body>
     <div id="wrapper">
         <div id="header"> 
+            <div>
+                <h1><%= link_to "PG Required", playgrounds_path%></h1>
+            </div>
             <div id="login_logout_box">
                 <% if user_signed_in? %>
                   Logged in as <strong><%= current_user.email %></strong>.
@@ -18,6 +21,11 @@
                   <%= link_to "Sign up", new_user_registration_path %> |
                   <%= link_to "Login", new_user_session_path %>
                 <% end %>
+                <br />
+                <strong>Admin Tools</strong><br />
+                <ul>
+                    <li><%= link_to 'View Equipment List', equipment_index_path %></li>
+                </ul>
             </div>
         </div>
         

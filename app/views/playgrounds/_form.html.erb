@@ -1,0 +1,26 @@
+<%= form_for @playground do |f| %>
+
+
+    <%= f.label :name %>
+    <%= f.text_field :name %><br />
+    
+    <%= f.label :suburb %>
+    <%= f.text_field :suburb %><br />
+    
+    <%= f.label :state %>
+    <%= f.text_field :state %><br />
+    <%= f.label :country %>
+    <%= f.text_field :country %><br />
+
+<% logger.debug "XXXXXXX: the value of :thingie is: #{from}"%>
+    <% if from == "from_edit" %>
+        <%= f.label :latitude%>
+        <%= f.text_field :latitude %><br />
+        <%= f.label :longitude %>
+        <%= f.text_field :longitude %><br />
+        <%= f.label :address%>
+        <%= f.text_field :address %><br />
+    <% end %>
+    <%= f.submit "Submit"%>
+    
+<% end %>
